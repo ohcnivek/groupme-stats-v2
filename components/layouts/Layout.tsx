@@ -18,7 +18,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <NavItem href="/">Home</NavItem>
       </div>
       {children}
-      <footer className="p-4 bg-white absolute inset-x-0 bottom-0 h-16 rounded-lg shadow items-center">
+      <footer className="p-4 absolute inset-x-0 bottom-0 h-16 rounded-lg items-center">
         <NavBar></NavBar>
       </footer>
     </div>
