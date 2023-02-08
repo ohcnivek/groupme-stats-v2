@@ -1,15 +1,20 @@
 import { NextPage } from "next";
 import React, { useState } from "react";
 import { Layout } from "../components/layouts/Layout";
+import { useRouter } from "next/router";
 
 interface Props {}
 const Info: NextPage<Props> = () => {
   const [token, setToken] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO HANDLE DATA
-    console.log(token);
+    router.push({
+      pathname: "/groups",
+      query: { token: token },
+    });
   };
 
   return (
